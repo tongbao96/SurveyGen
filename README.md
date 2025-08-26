@@ -1,4 +1,5 @@
-# SurveyGen
-[EMNLP 2025] Data and code for paper "SurveyGen: Quality-Aware Scientific Survey Generation with Large Language Models"
+# SurveyGen: Quality-Aware Scientific Survey Generation with Large Language Models# Accepted at EMNLP 2025 (Main Conference)
 
-coming soon..
+Dataset and code for paper: **"SurveyGen: Quality-Aware Scientific Survey Generation with Large Language Models"**  *Accepted at EMNLP 2025 (Main Conference)*
+
+coming soon.....
