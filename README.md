@@ -17,11 +17,22 @@ The dataset can be accessed at:  [SurveyGen (Google Drive)](https://drive.google
 It contains three files:  
 
 - **survey_full_text**: Parsed full texts of the surveys.  
-- **references_for_surveys**: Metadata of the references directly cited in the surveys (named *first-level references*). .  
+- **references_for_surveys**: Metadata of the references directly cited in the surveys (named *first-level references*). 
 - **second_level_references**: Metadata of the references cited by the first-level references.  
 
+---
+
+## 🛠️ Preparation Before Starting
+
+Before using the SurveyGen framework, please ensure you have the following resources ready:
+
+1. **Semantic Scholar API** — Apply for an API key at [Semantic Scholar API](https://www.semanticscholar.org/product/api).  
+2. **LLM API access** — Apply for access to the LLMs (e.g., [OpenAI](https://platform.openai.com/), [Google Gemini](https://ai.google/discover/gemini/), or [Anthropic Claude](https://www.anthropic.com/claude)).  
+3. **S2ORC metadata** — Download the full S2ORC metadata to your local environment from [S2ORC](https://api.semanticscholar.org/api-docs/).  
 
 ---
+
+## 💻 Code for QUAL-SG
 
 
 ## 📜 License
