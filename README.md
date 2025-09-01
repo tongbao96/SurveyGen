@@ -27,8 +27,8 @@ It contains three files:
 Before using the SurveyGen framework, please ensure you have the following resources ready:
 
 1. **Semantic Scholar API** — Apply for an API key at [Semantic Scholar API](https://www.semanticscholar.org/product/api#api-key).  
-2. **LLM API access** — Apply for access to the LLMs (e.g., [OpenAI](https://platform.openai.com/), [Google Gemini](https://ai.google/discover/gemini/), or [Anthropic Claude](https://www.anthropic.com/claude)).  
-3. **S2ORC metadata** — Download the full S2ORC metadata to your local environment from [S2ORC](https://api.semanticscholar.org/api-docs/).  
+2. **S2ORC metadata** — Download the full S2ORC metadata to your local environment from [S2ORC](https://api.semanticscholar.org/api-docs/).
+3. **LLM API access** — Apply for access to the LLMs (e.g., [OpenAI](https://platform.openai.com/), [Google Gemini](https://ai.google/discover/gemini/), or [Anthropic Claude](https://www.anthropic.com/claude)).  
 
 
 
