@@ -22,7 +22,7 @@ It contains three files:
 - Edit `example/topic.csv` to set the topic, year range, and `max_ref` (maximum number of references).  
 - Ensure you have access to an LLM API, e.g. [OpenAI](https://platform.openai.com/), [Google Gemini](https://ai.google/discover/gemini/), or [Anthropic Claude](https://www.anthropic.com/claude).  
 
-**Steps:**  
+**Quick start:**  
 1. Run `paper_retrieval.py` – retrieve topic-related papers from Semantic Scholar; output is a json file (DOI, title, abstract, etc.).  
 2. Run `quality_signal_augmentation.py` – enrich these papers with quality indicators from OpenAlex (citations, author h-index, venue metrics); output is an augmented metadata json file. 
 3. Run `paper_reranking.py` – re-rank the candidate papers and filter them down to `max_ref`; output is a ranked CSV file with selected references.  
@@ -30,12 +30,21 @@ It contains three files:
 5. Run `survey_generation.py` – generate the full survey text following the outline; output is a draft survey document.  
 6. Run `evaluation.py` – evaluate the generated survey (automatic metrics + optional human review); output is an evaluation report.  
 
-## 📜 License
+**Requirements:** 
 
-SurveyGen is released under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/legalcode) license.  The dataset follows the same policy as [S2ORC](https://allenai.org/data/s2orc) and [OpenAlex](https://openalex.org/): **for non-commercial academic research use only**.
+- `Python==3.8`  
+- `pandas==1.3.5`  
+- `sentence-transformers==2.2.2`  
+- `scikit-learn==1.0.2`  
+- `openai==1.39.0`  
+- `rouge-score==0.1.2`  
+- `numpy==1.21.5`
+  
+##  License
+SurveyGen is released under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/legalcode) license.  The dataset follows the same policy as [S2ORC](https://allenai.org/data/s2orc) and [OpenAlex](https://openalex.org/): for non-commercial academic research use only.
 
 
-## 📖 Citation
+## Citation
 
 If you use this dataset, please cite the following works:
 
