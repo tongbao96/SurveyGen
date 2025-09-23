@@ -1,10 +1,6 @@
-<h2 align="center">🚧 <b>This project is continuously updating. Please check back soon!</b> 🚧</h2>
-
-
-
 # SurveyGen: Quality-Aware Scientific Survey Generation with Large Language Models
 
-
+![SurveyGen Overview](./Code/SurveyGen.png)
 
 This is the official repository for the dataset and code of the paper:  ["SurveyGen: Quality-Aware Scientific Survey Generation with Large Language Models"](https://arxiv.org/abs/2508.17647),  *accepted at **EMNLP 2025** (Main Conference)*.
 
@@ -20,20 +16,19 @@ It contains three files:
 - **references_for_surveys**: Metadata of the references directly cited in the surveys (named *first-level references*). 
 - **second_level_references**: Metadata of the references cited by the first-level references.  
 
-
-
-## 🛠️ Preparation Before Starting
-
-Before using the SurveyGen framework, please ensure you have the following resources ready:
-
-1. **Semantic Scholar API** — Apply for an API key at [Semantic Scholar API](https://www.semanticscholar.org/product/api#api-key).  
-2. **S2ORC metadata** — Download the full S2ORC metadata to your local environment from [S2ORC](https://api.semanticscholar.org/api-docs/).
-3. **LLM API access** — Apply for access to the LLMs (e.g., [OpenAI](https://platform.openai.com/), [Google Gemini](https://ai.google/discover/gemini/), or [Anthropic Claude](https://www.anthropic.com/claude)).  
-
-
-
 ## 💻 Code for QUAL-SG
 
+**Note:**  
+- Edit `example/topic.csv` to set the topic, year range, and `max_ref` (maximum number of references).  
+- Ensure you have access to an LLM API, e.g. [OpenAI](https://platform.openai.com/), [Google Gemini](https://ai.google/discover/gemini/), or [Anthropic Claude](https://www.anthropic.com/claude).  
+
+### Steps
+1. Run `paper_retrieve.py` – retrieve topic-related papers from Semantic Scholar; output is a json file (DOI, title, abstract, etc.).  
+2. Run `quality_signal_augmentation.py` – enrich these papers with quality indicators from OpenAlex (citations, author h-index, venue metrics); output is an augmented metadata json file. 
+3. Run `paper_reranking.py` – re-rank the candidate papers and filter them down to `max_ref`; output is a ranked CSV file with selected references.  
+4. Run `outline_generation.py` – generate the survey outline based on the selected references; output is an outline file (structured sections/subsections).  
+5. Run `survey_generation.py` – generate the full survey text following the outline; output is a draft survey document.  
+6. Run `evaluation.py` – evaluate the generated survey (automatic metrics + optional human review); output is an evaluation report.  
 
 ## 📜 License
 
@@ -53,20 +48,3 @@ If you use this dataset, please cite the following works:
   year      = {2025},
   address   = {Suzhou, China}
 }
-
-@inproceedings{s2orc,
-  title     = {S2ORC: The Semantic Scholar Open Research Corpus},
-  author    = {Lo, Kyle and Wang, Lucy Lu and Neumann, Mark and Kinney, Rodney and Weld, Daniel S.},
-  booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
-  year      = {2020},
-  url       = {https://aclanthology.org/2020.acl-main.447},
-  doi       = {10.18653/v1/2020.acl-main.447}
-}
-
-@inproceedings{openalex,
-  author    = {Jason Priem and Heather Piwowar and Richard Orr},
-  title     = {OpenAlex: A fully-open index of scholarly works, authors, venues, institutions, and concepts},
-  booktitle = {Proceedings of the 26th International Conference on Science, Technology and Innovation Indicators (STI 2022)},
-  year      = {2022}
-}
-
