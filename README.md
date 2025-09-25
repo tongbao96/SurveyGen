@@ -4,8 +4,17 @@
 
 This is the official repository for the dataset and code of the paper:  ["SurveyGen: Quality-Aware Scientific Survey Generation with Large Language Models"](https://arxiv.org/abs/2508.17647),  *accepted at **EMNLP 2025** (Main Conference)*.
 
+## Overview
 
-## 📂 SurveyGen
+
+
+- We introduce **SurveyGen**, a large-scale dataset comprising over **4,200 human-written surveys** with section-level structures, cited references, and rich metadata capturing citation performance, author influence, and venue reputation. SurveyGen enables comprehensive evaluation across **content quality**, **citation quality**, and **structural consistency** in scientific survey generation tasks.  
+
+- We propose **QUAL-SG**, a novel quality-aware framework that extends the standard Retrieval-Augmented Generation (RAG) pipeline by incorporating literature quality assessment into survey generation. Our results show that QUAL-SG significantly improves citation reliability and enhances the overall content quality and structural consistency of generated surveys.  
+
+- We benchmark several state-of-the-art LLMs under varying levels of involvement in the survey generation process. Extensive evaluations—both automatic and human—are conducted to analyze model performance, identify key limitations, and provide actionable insights for future research on LLM-assisted academic writing.  
+
+## SurveyGen
 
 Our dataset is constructed based on resources from [S2ORC](https://allenai.org/data/s2orc) (Lo et al., 2020) and [OpenAlex](https://openalex.org/) (Priem et al., 2022).  
 The dataset can be accessed at:  [SurveyGen (Google Drive)](https://drive.google.com/drive/folders/1ky6FAd2rs9XPjmOrTMScPbPu_tBv4veh?usp=sharing)  
@@ -16,7 +25,7 @@ It contains three files:
 - **references_for_surveys**: Metadata of the references directly cited in the surveys (named *first-level references*). 
 - **second_level_references**: Metadata of the references cited by the first-level references.  
 
-## 💻 Code for QUAL-SG
+## Code for QUAL-SG
 
 **Note:**  
 - Edit `example/topic.csv` to set the topic, year range, and `max_ref` (maximum number of references).  
