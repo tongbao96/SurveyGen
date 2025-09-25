@@ -27,9 +27,14 @@ It contains three files:
 
 ## Code for QUAL-SG
 
-**Note:**  
+**Before start:**  
 - Edit `example/topic.csv` to set the topic, year range, and `max_ref` (maximum number of references).  
 - Ensure you have access to an LLM API, e.g. [OpenAI](https://platform.openai.com/), [Google Gemini](https://ai.google/discover/gemini/), or [Anthropic Claude](https://www.anthropic.com/claude).  
+- This is not required, but if you encounter access restrictions when retrieving paper from [Semantic Scholar](https://www.semanticscholar.org/product/api) or [OpenAlex](https://docs.openalex.org/), you may need to apply for an API key OR download the full dataset.  
+  - Semantic Scholar API: [https://www.semanticscholar.org/product/api](https://www.semanticscholar.org/product/api)  
+  - OpenAlex API Docs: [https://docs.openalex.org/](https://docs.openalex.org/)  
+  - OpenAlex Full Dataset Download: [https://openalex.org/download](https://openalex.org/download)  
+
 
 **Quick start:**  
 1. Create and activate a conda environment, then install the dependencies:  
